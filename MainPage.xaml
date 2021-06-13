@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="arithmetic_for_children.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:arithmetic_for_children"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Orange">
+    <ScrollViewer  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid RenderTransformOrigin="0.689,0.576" Margin="4,0,-4,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+            <Rectangle HorizontalAlignment="Left" Height="720" Margin="49,89,0,0" Fill="Black" VerticalAlignment="Top" Width="520"/>
+            <Button x:Name="seven_button" Content="7" Margin="74,379,0,0" VerticalAlignment="Top" Height="80" Width="94" FontSize="34" Click="seven_button_Click" />
+            <Button x:Name="eight_button" Content="8" Margin="202,379,0,0" VerticalAlignment="Top" Height="80" Width="94" FontSize="34" Click="eight_button_Click" />
+            <Button x:Name="nine_button" Content="9" Margin="327,379,0,0" VerticalAlignment="Top" Height="80" Width="94" FontSize="34" Click="nine_button_Click" />
+            <Button x:Name="four_button" Content="4" Margin="74,488,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="four_button_Click" />
+            <Button x:Name="five_button" Content="5" Margin="202,488,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="five_button_Click" />
+            <Button x:Name="six_button" Content="6" Margin="327,488,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="six_button_Click" />
+            <Button x:Name="one_button" Content="1" Margin="74,598,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="one_button_Click" />
+            <Button x:Name="two_button" Content="2" Margin="202,598,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="two_button_Click" />
+            <Button x:Name="three_button" Content="3" Margin="327,598,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="three_button_Click" />
+            <Button x:Name="zero_button" Content="0" Margin="74,706,0,0" Height="80" Width="222" FontSize="34" VerticalAlignment="Top" Click="zero_button_Click" />
+            <Button x:Name="dot_button" Content="." Margin="327,706,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="dot_button_Click" />
+            <Button x:Name="equal_button" Content="=" Margin="449,706,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="equal_button_Click" />
+            <Button x:Name="add_button" Content="+" Margin="449,598,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="add_button_Click" />
+            <Button x:Name="substract_button" Content="-" Margin="449,488,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="substract_button_Click" />
+            <Button x:Name="multiply_button" Content="x" Margin="449,379,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="multiply_button_Click" />
+            <Button x:Name="clear_button" Content="CE" Margin="74,266,0,0" VerticalAlignment="Top" Height="80" Width="94" FontSize="34" Click="clear_button_Click" />
+            <Button x:Name="modulus_button" Content="%" Margin="202,266,0,0" VerticalAlignment="Top" Height="80" Width="94" FontSize="34" Click="modulus_button_Click" />
+            <Button x:Name="square_root_button" Content="√" Margin="327,266,0,0" VerticalAlignment="Top" Height="80" Width="94" FontSize="34" Click="square_root_button_Click" />
+            <Button x:Name="divide_button" Content="÷" Margin="449,266,0,0" Height="80" Width="94" FontSize="34" VerticalAlignment="Top" Click="divide_button_Click" />
+            <Rectangle HorizontalAlignment="Left" Height="108" Margin="74,118,0,0" Fill="LightGreen" VerticalAlignment="Top" Width="469" RenderTransformOrigin="0.54,0.28"/>
+            <Rectangle HorizontalAlignment="Left" Height="80" Margin="198,851,0,0" Fill="Black" VerticalAlignment="Top" Width="222" RenderTransformOrigin="0.54,0.28"/>
+            <Rectangle HorizontalAlignment="Left" Height="80" Margin="876,851,0,0" Fill="Black" VerticalAlignment="Top" Width="222" RenderTransformOrigin="0.54,0.28"/>
+            <Button x:Name="check_button" Content="Check" Margin="199,851,0,0" Height="80" Width="222" FontSize="34" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="0.514,1" Click="check_button_Click" />
+            <Button x:Name="generate_button" Content="Generate" Margin="876,851,0,0" Height="80" Width="222" FontSize="34" VerticalAlignment="Top" Foreground="White" Click="generate_button_Click" />
+            <Rectangle x:Name="workboard" HorizontalAlignment="Left" Height="57" Margin="49,10,0,0" Fill="Black" VerticalAlignment="Top" Width="1330" RenderTransformOrigin="0.54,0.28"/>
+            <Rectangle HorizontalAlignment="Left" Height="57" Margin="1205,10,0,0" Stroke="Black" Fill="White" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.54,0.28"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1288,20,0,0" Text="Points" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Foreground="Black"/>
+            <TextBlock x:Name="score_label" HorizontalAlignment="Left" Margin="1224,20,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Foreground="Black" Width="53" TextAlignment="Right"/>
+            <TextBlock x:Name="submit_score" HorizontalAlignment="Left" Margin="78,24,0,0" Text="Submit" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="White" Tapped="submit_score_Tapped"/>
+            <TextBlock x:Name="reset" HorizontalAlignment="Left" Margin="216,24,0,0" Text="Reset" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="White" Tapped="reset_Tapped"/>
+            <TextBlock HorizontalAlignment="Left" Margin="179,19,0,0" Text="|" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Foreground="White"/>
+            <TextBlock x:Name="calculator_type_label" HorizontalAlignment="Left" Margin="89,160,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="44" Width="443" TextAlignment="Right" Foreground="Black"/>
+            <TextBlock x:Name="calculator_type_label_2" HorizontalAlignment="Left" Margin="89,129,0,0" Text="Enter your answer or do calculation!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26" Foreground="Black" Width="439" TextAlignment="Right"/>
+            <Rectangle HorizontalAlignment="Left" Height="517" Fill="White" VerticalAlignment="Top" Width="773" Margin="605,293,0,0" Stroke="Black"/>
+            <InkCanvas x:Name="inkCanvas" Margin="605,293,0,0" RenderTransformOrigin="0.488,0.501" HorizontalAlignment="Left" Width="773" Height="517" VerticalAlignment="Top"/>
+            <InkToolbar HorizontalAlignment="Left" Margin="882,294,0,0" VerticalAlignment="Top" Height="52" Width="210" TargetInkCanvas="{x:Bind inkCanvas}" Background="Black" />
+            <Rectangle HorizontalAlignment="Left" Height="179" Margin="605,89,0,0" VerticalAlignment="Top" Width="774" Fill="White" Stroke="Black"/>
+            <TextBlock HorizontalAlignment="Left" Margin="628,103,0,0" Text="Problem" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+            <TextBlock x:Name="word_problem" HorizontalAlignment="Left" Margin="628,146,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="24" FontWeight="Normal" Height="96" Width="735"/>
+            <TextBlock x:Name="question_number" HorizontalAlignment="Left" Margin="732,103,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="24" FontWeight="Bold" Width="35" TextAlignment="Left"/>
+            <TextBlock x:Name="about" HorizontalAlignment="Left" Margin="336,24,0,0" Text="About" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="White" Tapped="about_Tapped"/>
+            <TextBlock HorizontalAlignment="Left" Margin="299,19,0,0" Text="|" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Foreground="White"/>
+            <ScrollBar HorizontalAlignment="Left" Margin="347,84,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+    </ScrollViewer>
+</Page>
